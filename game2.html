@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>رحلة في عالم AI – جواز السفر</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#f5c04a;--gold2:#d69a1f;--cream:#fff4d6;--navy:#0d1b5e;--sky:#2b4fd8;--ink:#2a1d05;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:'Cairo',Tahoma,sans-serif;color:#fff;min-height:100vh;background:radial-gradient(circle at 20% 10%,#3a5cff 0,transparent 40%),radial-gradient(circle at 85% 30%,#7a3cff 0,transparent 35%),linear-gradient(180deg,#0b1a6e,#142a9c 55%,#1a3fc0);background-attachment:fixed;overflow-x:hidden}
+.stars{position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(2px 2px at 20px 30px,#fff,transparent),radial-gradient(1.5px 1.5px at 90px 80px,#fff9,transparent),radial-gradient(2px 2px at 160px 20px,#ffe9a8,transparent),radial-gradient(1.5px 1.5px at 60px 140px,#fff,transparent);background-size:180px 170px;animation:tw 4s infinite alternate}
+@keyframes tw{from{opacity:.4}to{opacity:1}}
+.wrap{position:relative;max-width:560px;margin:0 auto;padding:16px 14px 40px}
+.flag{position:absolute;top:8px;left:8px;width:74px;transform:rotate(-12deg);filter:drop-shadow(0 3px 4px #0006)}
+.ribbon{background:linear-gradient(#ffeaa8,var(--gold));color:var(--navy);border:3px solid var(--gold2);border-radius:18px;font-weight:900;text-align:center;box-shadow:0 4px 10px #0005}
+.school{margin:6px 70px 14px 0;padding:6px 10px;font-size:15px}
+.title{background:radial-gradient(#1a2f9a,var(--navy));border:4px solid var(--gold);border-radius:34px;padding:14px 10px;text-align:center;box-shadow:0 0 24px #7fa2ff77}
+.title small{font-size:20px;font-weight:700}
+.title h1{margin:0;font-size:38px;line-height:1.2;color:var(--gold);font-weight:900}
+.title h1 b{font-size:50px;color:#ffd56b}
+.title p{margin:4px 0 0;font-weight:700;font-size:17px}
+.pass{margin:10px auto 0;width:max-content;padding:4px 22px;font-size:17px;direction:ltr}
+.robot{font-size:64px;text-align:center;animation:fl 3s ease-in-out infinite;margin-top:14px}
+@keyframes fl{50%{transform:translateY(-10px)}}
+.slogan{text-align:center;font-weight:700;font-size:18px;color:#cfe0ff}
+.card{background:linear-gradient(#fff7dc,#ffe9a8);color:var(--ink);border:3px solid var(--gold2);border-radius:26px;padding:16px;margin:14px 0;box-shadow:0 6px 14px #0005}
+label{display:block;font-weight:900;font-size:18px;margin-bottom:8px;text-align:center}
+input[type=text]{width:100%;font:700 20px Cairo,sans-serif;text-align:center;padding:12px;border-radius:16px;border:2px solid var(--gold2);background:#fff;color:var(--navy)}
+.opt{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}
+.opt button{flex:1;font:700 15px Cairo,sans-serif;padding:10px 4px;border-radius:14px;border:2px solid var(--gold2);background:#fff;color:var(--navy)}
+.opt button.on{background:var(--navy);color:var(--gold);border-color:var(--navy)}
+.go{width:100%;font:900 20px Cairo,sans-serif;padding:13px;border:0;border-radius:18px;background:linear-gradient(#3b66ff,#1c37b8);color:#fff;box-shadow:0 5px 0 #0c1d77;cursor:pointer}
+.go:active{transform:translateY(3px);box-shadow:0 2px 0 #0c1d77}
+#out{display:none}
+.book{background:linear-gradient(145deg,#16318f,#0b1a63);border:3px solid var(--gold);border-radius:22px;padding:18px;text-align:center;position:relative;box-shadow:0 8px 20px #0007}
+.book .crown{font-size:30px}
+.book .ai{font-weight:900;font-size:22px;color:var(--gold);letter-spacing:2px}
+.book .nm{font-size:26px;font-weight:900;margin:6px 0;color:#fff}
+.book .tag{font-size:14px;color:#cfe0ff}
+.stamp{position:absolute;left:14px;bottom:12px;border:3px solid #ff6b6b;color:#ff8a8a;border-radius:50%;width:84px;height:84px;display:grid;place-items:center;font-weight:900;font-size:13px;transform:rotate(-14deg) scale(0);animation:st .5s .6s forwards}
+@keyframes st{to{transform:rotate(-14deg) scale(1)}}
+.msg{opacity:0;transform:translateY(18px);animation:up .7s forwards}
+.msg h3{margin:0 0 6px;font-size:19px;color:#7a3b00}
+.msg p{margin:0;font-size:17px;line-height:1.9;font-weight:500}
+@keyframes up{to{opacity:1;transform:none}}
+.special{border-color:#e0457b;background:linear-gradient(#fff0f5,#ffd6e4)}
+.special h3{color:#a3124a}
+.again{background:transparent;color:var(--gold);border:2px solid var(--gold);font:700 16px Cairo,sans-serif;padding:10px 20px;border-radius:30px;display:block;margin:10px auto}
+.credit{margin-top:22px;text-align:center}
+.credit .ribbon{padding:8px;margin:8px 0;font-size:15px}
+.credit .ribbon span{display:block;font-size:19px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.conf{position:fixed;top:-30px;font-size:24px;pointer-events:none;animation:fall linear forwards;z-index:9}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}
+textarea{width:100%;font:500 17px Cairo,sans-serif;padding:10px;border-radius:14px;border:2px solid var(--gold2);background:#fff;color:var(--navy);resize:none;margin-bottom:10px}
+.fin h3{margin:0 0 10px;text-align:center;font-size:20px;color:#7a3b00}
+.fin label{font-size:16px;text-align:right;margin-bottom:4px}
+#cert{display:none;margin:14px 0;background:linear-gradient(#fffaf0,#ffefc2);color:var(--ink);border:5px double var(--gold2);border-radius:24px;padding:20px 16px;text-align:center;position:relative;box-shadow:0 8px 20px #0007;overflow:hidden}
+#cert h2{margin:0;font-size:26px;color:#7a3b00;font-weight:900}
+#cert .big{font-size:26px;font-weight:900;color:var(--navy);margin:6px 0}
+#cert .q{background:#fff;border:2px dashed var(--gold2);border-radius:14px;padding:10px;margin:10px 0;text-align:right;font-size:16px;line-height:1.8}
+#cert .q b{color:#a3124a;display:block;font-size:14px}
+#cert .ft{font-size:14px;color:#6b4a00;margin-top:8px}
+#cstamp{margin:8px auto 0;width:130px;height:130px;border:5px solid #d9262c;color:#d9262c;border-radius:50%;display:grid;place-items:center;font-weight:900;font-size:19px;line-height:1.4;transform:rotate(-12deg) scale(0)}
+#cert.show #cstamp{animation:cs .6s .3s forwards}
+@keyframes cs{60%{transform:rotate(-12deg) scale(1.25)}to{transform:rotate(-12deg) scale(1)}}
+</style>
+</head>
+<body>
+<div class="stars"></div>
+<div class="wrap">
+  <svg class="flag" viewBox="0 0 60 40"><rect width="60" height="14" fill="#1a9a4a"/><rect y="13" width="60" height="14" fill="#fff"/><rect y="26" width="60" height="14" fill="#d9262c"/><polygon points="0,0 16,13 16,27 0,40" fill="#111"/></svg>
+  <div class="ribbon school">مدرسة عبد الوهاب القرطاس</div>
+  <div class="title">
+    <small>ورشة</small>
+    <h1>رحلة في عالم <b>AI</b></h1>
+    <p>من الفكرة إلى المغامرة</p>
+    <div class="ribbon pass">AI World Passport</div>
+  </div>
+  <div class="robot">🤖</div>
+  <div class="slogan">لنصمّم .. لنبدع .. ولنتعلّم بطريقة ممتعة ✨</div>
+
+  <div class="card" id="inp">
+    <label for="n">✈️ اكتبي اسمك لاستلام جواز سفرك</label>
+    <input type="text" id="n" placeholder="مثال: أ/ سارة أحمد" autocomplete="off">
+    <div class="opt">
+      <button type="button" id="r_t" class="on">👩‍🏫 معلمة</button>
+      <button type="button" id="r_s" style="display:none">🌸 معلمة إحلال</button>
+      <button type="button" id="r_st" style="display:none">🎒 طالب / طالبة</button>
+      <button type="button" id="r_h">رئيسة القسم</button>
+      <button type="button" id="r_g">الموجهة الفنية</button>
+      <button type="button" id="r_a">المديرة المساعدة</button>
+      <button type="button" id="r_o" style="grid-column:1/3">رئيس / رئيسة قسم (مادة أخرى)</button>
+      <button type="button" id="r_d" style="grid-column:1/3">مديرة المدرسة</button>
+    </div>
+    <button class="go" id="go">🛂 أصدري جوازي</button>
+  </div>
+
+  <div id="out">
+    <div class="book">
+      <div class="crown">👑</div>
+      <div class="ai">AI PASSPORT</div>
+      <div class="nm" id="nm"></div>
+      <div class="tag" id="tag">مسافرة معتمدة في عالم الذكاء الاصطناعي 🌍</div>
+      <div class="stamp">تم<br>الختم ✓</div>
+      <div style="height:50px"></div>
+    </div>
+    <div id="msgs"></div>
+    <button class="again" id="again">↻ مسافرة جديدة</button>
+  </div>
+
+  <div class="credit">
+    <div class="ribbon"><span>د/ نجوى عبد التواب</span>إعداد وتقديم المعلمة</div>
+    <div class="grid">
+      <div class="ribbon">رئيسة القسم<span>أ/ هيا العتيبي</span></div>
+      <div class="ribbon">الموجهة الفنية<span>أ/ عذاري الفيلكاوي</span></div>
+      <div class="ribbon">المديرة المساعدة<span>أ/ حنان الخالدي</span></div>
+      <div class="ribbon">مديرة المدرسة<span>أ/ سعاد العازمي</span></div>
+    </div>
+  </div>
+</div>
+
+<script>
+var role='t',$=function(i){return document.getElementById(i)};
+var names={d:'أ/ سعاد العازمي',a:'أ/ حنان الخالدي',g:'أ/ عذاري الفيلكاوي',h:'أ/ هيا العتيبي'};
+var tags={t:'مسافرة معتمدة في عالم الذكاء الاصطناعي 🌍',s:'مسافرة معتمدة في عالم الذكاء الاصطناعي 🌍',st:'مسافر صغير في عالم الذكاء الاصطناعي 🚀',d:'قائدة الرحلة وراعية الإبداع 👑',a:'داعمة الرحلة وركيزة النجاح 🌟',g:'مرشدة الرحلة وبوصلة التطوير 🧭',h:'رائدة الرحلة وصانعة الفريق 💫'};
+var L={
+d:['بقيادتك الحكيمة أصبحت مدرستنا بيئة تحتضن التجديد وتفتح الباب لكل فكرة جديدة، ولولا دعمك وثقتك ما خرجت هذه الورشة إلى النور. شكرًا لكِ من القلب.','رؤيتك التي تؤمن بالتطوير ومواكبة العصر تمنح معلماتنا وطلابنا فرصة حقيقية للانطلاق نحو مستقبل رقمي مشرق، وهذا ما يصنع الفارق في مدرستنا.','أثر قيادتك ظاهر في كل فصل وفي كل ابتسامة طالب، نسأل الله أن يبارك في جهدك ويوفقك دائمًا لما فيه خير مدرستنا وأبنائنا.'],
+a:['متابعتك الدقيقة وحضورك الدائم في كل تفصيل يمنحان الفريق طمأنينة وثباتًا، وقد كان لدعمك أثر كبير في إنجاح هذه الورشة. شكرًا لكِ.','أنتِ اليد التي تُنظّم والقلب الذي يهتم؛ بحرصك وإخلاصك تسير المدرسة بانسيابية وتتحول الأفكار إلى واقع جميل.','نسأل الله أن يجزيك خير الجزاء على عطائك المتواصل، وأن يجعل أثرك الطيب باقيًا في كل من عملتِ معه.'],
+g:['توجيهاتك الفنية الواعية وملاحظاتك البنّاءة هي البوصلة التي تضبط مسارنا نحو الجودة والتميّز. شكرًا لكِ على إرشادك ودعمك.','بخبرتك تحوّلين التحديات إلى فرص، وتُلهمين المعلمات لتجريب أساليب حديثة ومبتكرة في التعليم، ومنها رحلتنا هذه في عالم AI.','نقدّر أثرك المهني الذي يمتد إلى كل معلمة وكل طالب، ونسأل الله أن يبارك علمك ويزيدك توفيقًا ونجاحًا.'],
+h:['إشرافك المباشر وتشجيعك المستمر كان له الفضل الكبير في أن تنمو الفكرة وتكتمل. شكرًا لكِ على ثقتك وعلى دعمك لكل مبادرة.','بروح القائدة المتعاونة تصنعين فريقًا متماسكًا يتشارك المعرفة ويتبادل الخبرة، وهذا سر نجاح القسم وتميّزه.','أثرك الطيب في زميلاتك وفي طلابنا لا يُنسى، نسأل الله أن يديم عليك التوفيق والعطاء ويجعل جهدك في ميزان حسناتك.']};
+tags.o='قائد القسم وشريك الرحلة 🧭';
+L.o=['شكرًا لحضورك ودعمك للورشة؛ فاهتمامك بالتطوير ومتابعتك لمعلمي قسمك يصنعان فرقًا حقيقيًا في مستوى التعليم في مدرستنا.','قيادتك لقسمك بروح التعاون وتشجيعك للأفكار الجديدة تجعلان من الذكاء الاصطناعي فرصة لإثراء مادتك وإلهام طلابك، وهذه الورشة بداية لتبادل الخبرات بين الأقسام.','أثرك الطيب في زملائك وطلابك يمتد بعيدًا، نسأل الله أن يبارك جهدك ويوفقك دائمًا لما فيه خير المسيرة التعليمية.'];
+var stu=['شكرًا لأنك جئت وشاركتنا الرحلة! حماسك وفضولك يجعلان الورشة أجمل وأمتع.','أنت مبدع بالفعل! تعلّم، جرّب، واسأل دائمًا، فالذكاء الاصطناعي سيكون أداتك لتصنع أفكارًا مذهلة وتحلّق بها بعيدًا.','كل خطوة تتعلمها اليوم تقرّبك من حلمك الكبير، وأثرك الجميل في مدرستك وبين زملائك يجعلنا فخورين بك جدًا. واصل التألق!'];
+var SUB={
+'هناء':'أستاذة هناء، ابتسامتك الهادئة وعطاؤك الصادق تركا في قلوبنا مكانًا جميلًا. قد تنتهي المدة، لكن أثرك الطيب باقٍ في طلابك وزميلاتك، ونسأل الله أن يفتح لك أبوابًا أوسع من الخير والرزق. 💙',
+'انتصار':'أستاذة انتصار، اسمك يشبه ما قدّمتِه من جهد؛ فقد انتصرتِ بإخلاصك على كل التحديات. شكرًا لكِ من القلب، وبإذن الله القادم أجمل وأوسع. 🌟',
+'دينا':'أستاذة دينا، حضورك الخفيف على القلب ونشاطك في كل عمل كانا نعمة لزميلاتك وطلابك. ما زرعتِه من محبة سيبقى، والله لا يضيّع تعب المخلصين. 🌷',
+'عفاف':'أستاذة عفاف، رقيّك وحسن خلقك درس لنا قبل أن يكون لطلابك. جزاكِ الله خيرًا، وجعل لكِ في كل مكان تذهبين إليه بابًا من التوفيق والسعادة. 🤍',
+'نجوي':'أستاذة نجوى، أنتِ أقوى من أي نهاية؛ فقد جمعتِ بين العطاء والتجديد وعلّمتِ زميلاتك الكثير. ما بذلتِه لن يضيع، والقادم بإذن الله أجمل. ✨',
+'رشا':'أستاذة رشا، جهدك الهادئ وإتقانك لعملك يستحقان كل التقدير. أنتِ إضافة حقيقية لأي مدرسة، وبإذن الله ستجدين دائمًا من يقدّر قيمتك. 🌸',
+'خلود':'أستاذة خلود، كما يدل اسمك سيبقى أثرك خالدًا في طلابك وزميلاتك. شكرًا على كل لحظة عطاء، ونسأل الله لكِ فرحة قريبة وخيرًا يفوق ما تتمنين. 🌙'};
+function norm(s){return s.replace(/[أإآ]/g,'ا').replace(/ى/g,'ي')}
+function subMsg(n){var t=norm(n).split(/[^ء-ي]+/);for(var i=0;i<t.length;i++){if(SUB[t[i]])return SUB[t[i]]}return ''}
+function setRole(r){
+  var v=$('n').value.trim();role=r;
+  ['t','s','st','h','g','a','d','o'].forEach(function(k){$('r_'+k).className=k===r?'on':''});
+  if(names[r])$('n').value=names[r];
+  else for(var k in names)if(names[k]===v)$('n').value='';
+}
+['t','s','st','h','g','a','d','o'].forEach(function(k){$('r_'+k).onclick=function(){setRole(k)}});
+function pick(a){return a[Math.floor(Math.random()*a.length)]}
+var thanks=[
+"شكرًا لكِ على حضورك ومشاركتك، فوجودك أضاف للورشة روحًا وحماسًا يصنعان الفرق.",
+"شكرًا لأنكِ خصصتِ من وقتك لتتعلمي وتُجرّبي، فالمعلمة الشغوفة هي نواة كل مدرسة ناجحة.",
+"ممتنة لحضورك وتفاعلك، فأنتِ جزء أصيل من رحلتنا نحو تعليم أجمل."];
+var boost=[
+"أنتِ قادرة على أن تحوّلي أي فكرة إلى تجربة تعليمية ممتعة؛ فالذكاء الاصطناعي أداة بيدك، والإبداع بصمتك أنتِ.",
+"كل خطوة تتعلمينها اليوم تُقرّبك من فصل أكثر حيوية وطلاب أكثر شغفًا. استمري، فأنتِ تسيرين في الطريق الصحيح.",
+"لديكِ ما يكفي من الخبرة والخيال لتصنعي المغامرة التعليمية التالية، وهذه الورشة بداية الشرارة فقط."];
+var imp=[
+"أثرك في طلابك لا يُقاس بالدرجات فقط، بل بكلمة شجّعتِ بها، وبابتسامة زرعتِ بها الثقة، وهذا أثر يبقى طويلًا.",
+"سيبقى أثرك الطيب في قلوب طلابك وزميلاتك، فالمعلمة الحقيقية تترك بصمة لا تزول.",
+"ما قدّمتِه من جهد وعطاء ترك بصمة جميلة في هذه المدرسة، وسيظل يُذكر بكل تقدير."];
+var spec=[
+"إلى معلمات الإحلال الغاليات: نقدّر عطاءكنّ وإخلاصكنّ، فقد كنتنّ جزءًا أساسيًا من هذه المدرسة، وأثركنّ باقٍ في طالباتكنّ وفي كل زاوية من هذا المكان. نسأل الله أن يفتح لكنّ أبواب الخير والتوفيق في كل خطوة قادمة، وأن تبقى رحلتكنّ مع التعليم مليئة بالنجاح. شكرًا من القلب 💙",
+"رسالة تقدير لكِ: ما بذلتِه من جهد وتفانٍ لن يُنسى، وبصمتك حاضرة في فصولنا وقلوب طالباتنا. ستنتهي المدة، لكن الأثر لا ينتهي، وما تعلمتِه وعلّمتِه سيرافقك أينما ذهبتِ. دمتِ نجمة في سماء التعليم ⭐"];
+function add(cls,h,t,d){
+  var c=document.createElement('div');c.className='card msg '+cls;c.style.animationDelay=d+'s';
+  var a=document.createElement('h3');a.textContent=h;var p=document.createElement('p');p.textContent=t;
+  c.appendChild(a);c.appendChild(p);$('msgs').appendChild(c);
+}
+function conf(){
+  var e=['⭐','✨','🎉','💙','🌟'];
+  for(var i=0;i<26;i++){(function(i){setTimeout(function(){
+    var s=document.createElement('span');s.className='conf';s.textContent=pick(e);
+    s.style.left=Math.random()*95+'vw';s.style.animationDuration=(2.5+Math.random()*2)+'s';
+    document.body.appendChild(s);setTimeout(function(){s.remove()},5000)},i*90)})(i)}
+}
+$('go').onclick=function(){
+  var v=$('n').value.trim();
+  if(!v){$('n').focus();$('n').style.borderColor='#d9262c';return}
+  var name=v;
+  $('nm').textContent=name;
+  $('msgs').innerHTML='';
+  $('tag').textContent=tags[role];
+  if(L[role]){
+    add('','💌 رسالة شكر',name+'، '+L[role][0],.3);
+    add('','🌟 تقدير لدورك',L[role][1],.9);
+    add('','🤲 دعاء وأثر',L[role][2],1.5);
+  }else if(false){
+    add('','💌 رسالة شكر','يا '+name+'، '+stu[0],.3);
+    add('','🚀 رسالة تعزيز',stu[1],.9);
+    add('','🌱 رسالة عن الأثر',stu[2],1.5);
+  }else{
+    add('','💌 رسالة شكر','عزيزتي '+name+'، '+pick(thanks),.3);
+    add('','🚀 رسالة تعزيز',pick(boost),.9);
+    add('','🌱 رسالة عن الأثر',pick(imp),1.5);
+    var sp=subMsg(name);if(sp&&role==='t')add('special','💖 رسالة خاصة من القلب',sp,2.1);
+  }
+  $('inp').style.display='none';$('out').style.display='block';
+  $('out').scrollIntoView({behavior:'smooth'});conf();
+};
+$('again').onclick=function(){
+  $('out').style.display='none';$('inp').style.display='block';$('n').value='';window.scrollTo({top:0,behavior:'smooth'});
+};
+$('n').addEventListener('keydown',function(e){if(e.key==='Enter')$('go').click()});
+</script>
+</body>
+</html>
